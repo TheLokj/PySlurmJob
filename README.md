@@ -35,11 +35,11 @@ PySlurmJob also provides two functions to get information concerning a finished 
 
 #### Seff
 
-The `seff` function return a dictionnary containing the seff data :
+The `seff` function returns a dictionnary containing the seff data :
 
     pyslurmjob.seff(id)
 
-The dictionary is basically build like that :
+The dictionary is basically built like that :
 
     {'Job ID': '0000001', 
     'Cluster': 'clusterName', 
@@ -56,7 +56,7 @@ The dictionary is basically build like that :
 
 #### Sacct
 
-The `sacct` function return a list of ditionnary containing, for each step of the job, all the [job accouting fields](https://slurm.schedmd.com/sacct.html#SECTION_Job-Accounting-Fields) and the associated values. 
+The `sacct` function returns a list of ditionnary containing, for each step of the job, all the [job accouting fields](https://slurm.schedmd.com/sacct.html#SECTION_Job-Accounting-Fields) and the associated values. 
 
     pyslurmjob.sacct(id)
 
