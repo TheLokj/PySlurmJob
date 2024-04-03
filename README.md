@@ -16,7 +16,7 @@ This script can be used very easily.
 
 It's possible to launch commands into a Slurm job thanks to the function `new_job`, which return the job output and its ID **ONLY** when it's finished.
 
-    output, id = pyslurm.new_job(["echo Sorry to the cluster administrator for this questionable allocation", "echo it is the last time, I promise"], args: slurmArgs)
+    output, id = pyslurm.new_job(["echo Sorry to the cluster administrator for this questionable allocation", "echo it is the last time, I promise"], args = slurmArgs)
 
 where `slurmArgs` is a dictionnary containing the [desired Slurm Batch options](https://slurm.schedmd.com/sbatch.html#SECTION_OPTIONS).
 
