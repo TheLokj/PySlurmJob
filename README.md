@@ -8,7 +8,7 @@ As PySlurmJob is really tiny, you can just copy it into your script or clone it 
 
 ## Usage
 
-This script can be used very simply. 
+This script can be used very easily. 
 
     import pyslurmjob
 
