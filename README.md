@@ -16,7 +16,7 @@ This script can be used very easily.
 
 It's possible to launch commands into a Slurm job thanks to the function `new_job`, which return the job output and its ID **ONLY** when it's finished.
 
-    output, id = pyslurm.new_job(["echo Sorry to the cluster administrator for this questionable allocation", "echo it is the last time, I promise"], args = slurmArgs)
+    output, id = pyslurmjob.new_job(["echo Sorry to the cluster administrator for this questionable allocation", "echo it is the last time, I promise"], args = slurmArgs)
 
 where `slurmArgs` is a dictionnary containing the [desired Slurm Batch options](https://slurm.schedmd.com/sbatch.html#SECTION_OPTIONS).
 
@@ -37,7 +37,7 @@ PySlurmJob also provides two functions to get information concerning a finished 
 
 The `seff` function return a dictionnary containing the seff data :
 
-    pyslurm.seff(id)
+    pyslurmjob.seff(id)
 
 The dictionary is basically build like that :
 
@@ -58,7 +58,7 @@ The dictionary is basically build like that :
 
 The `sacct` function return a list of ditionnary containing, for each step of the job, all the [job accouting fields](https://slurm.schedmd.com/sacct.html#SECTION_Job-Accounting-Fields) and the associated values. 
 
-    pyslurm.sacct(id)
+    pyslurmjob.sacct(id)
 
 For example, the above example `new_job` runs two commands with default IDs of 0 and 1. It is then possible to access to the field *Average Virtual Memory size* of the previously launched command `echo it is the last time, I promise` by typing the following code :
 
